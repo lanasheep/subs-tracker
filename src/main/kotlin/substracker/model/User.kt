@@ -1,3 +1,5 @@
+package substracker.model
+
 import java.util.UUID
 
 data class User(

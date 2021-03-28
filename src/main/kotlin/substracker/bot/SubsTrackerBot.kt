@@ -1,3 +1,5 @@
+package substracker.bot
+
 import org.springframework.stereotype.Component
 import org.telegram.telegrambots.bots.TelegramLongPollingBot
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage
@@ -8,7 +10,7 @@ class SubsTrackerBot : TelegramLongPollingBot() {
 
     override fun getBotToken(): String = ""
 
-    override fun getBotUsername(): String = ""
+    override fun getBotUsername(): String = "SubsTrackerBot"
 
     override fun onUpdateReceived(update: Update?) {
         if (update != null && update.hasMessage() && update.getMessage().hasText()) {
