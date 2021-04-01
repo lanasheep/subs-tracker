@@ -10,7 +10,7 @@ open class SubscriptionRepository(private val context: DSLContext) {
     open fun selectAll(): List<Subscription> {
         return context.selectFrom(SUBSCRIPTION).fetchInto(Subscription::class.java)
     }
-    open fun selectByUserId(user_id: Int): List<Subscription> {
-        return context.selectFrom(SUBSCRIPTION).where(SUBSCRIPTION.USER_ID.eq(user_id)).fetchInto(Subscription::class.java)
+    open fun selectByUserId(userId: Int): List<Subscription> {
+        return context.selectFrom(SUBSCRIPTION).where(SUBSCRIPTION.USER_ID.eq(userId)).fetchInto(Subscription::class.java)
     }
 }
