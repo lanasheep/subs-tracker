@@ -23,6 +23,19 @@ dependencies {
     implementation "org.postgresql:postgresql:42.2.2"
     flywayMigration 'org.postgresql:postgresql:42.2.2'
     jooqGenerator 'org.postgresql:postgresql:42.2.2'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+
+    testImplementation 'com.github.tomakehurst:wiremock:2.18.0'
+
+    testImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testImplementation "org.jetbrains.kotlin:kotlin-reflect"
+    testImplementation "org.jetbrains.kotlin:kotlin-test"
+
+    testImplementation 'org.testng:testng:7.1.0'
+    testImplementation "org.testcontainers:postgresql:1.12.5"
 }
 
 flyway {
