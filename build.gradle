@@ -28,7 +28,7 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
 
-    testImplementation 'com.github.tomakehurst:wiremock:2.18.0'
+    testImplementation 'com.github.tomakehurst:wiremock:2.27.0'
 
     testImplementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     testImplementation "org.jetbrains.kotlin:kotlin-reflect"
@@ -93,4 +93,8 @@ tasks.named('generateJooq').configure {
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+test {
+    useTestNG()
 }
