@@ -1,8 +1,6 @@
 package substracker.model
 
-import java.util.UUID
-
 data class User(
-    val id: UUID,
+    val id: Int,
     val login: String,
 )

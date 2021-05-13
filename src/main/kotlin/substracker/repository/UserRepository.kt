@@ -10,4 +10,8 @@ open class UserRepository(private val context: DSLContext) {
     open fun selectAll(): List<User> {
         return context.selectFrom(USER).fetchInto(User::class.java)
     }
+
+    open fun add(id: Int, login: String) {
+        context.insertInto(USER, USER.ID, USER.LOGIN).values(id, login).execute()
+    }
 }
